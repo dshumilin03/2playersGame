@@ -2,6 +2,7 @@
 import pygame
 import sys
 import math
+from os import path
 # </editor-fold>
 
 pygame.display.init()
@@ -20,10 +21,14 @@ Height = 600
 screen = pygame.display.set_mode((Width, Height))
 # </editor-fold>
 
+image_dir = path.join(path.dirname(__file__), 'images')
+
+pygame.image.load(image_dir)
+
 game_is_running = True
 
 while game_is_running is True:
-    screen.fill((255, 255, 255))
+    screen.fill(white)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
