@@ -31,9 +31,9 @@ while game_is_running is True:
 
     pygame.display.update()
 
+# It's better to extract this class into separate file
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         self.width = 10
         self.height = 10
-
